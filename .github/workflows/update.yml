@@ -1,0 +1,36 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: |
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_linux_32.tar.gz
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_linux32.rar
+		      wget http://sop.tik.ee.ethz.ch/pisa/selectors/sibea/sibea_binary.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/hype/hype_linux_32.tar.gz
+		      wget http://sop.tik.ee.ethz.ch/pisa/lotz_semo/semo_linux.tar.gz
+		      wget http://sop.tik.ee.ethz.ch/pisa/selectors/semo2/semo2_linux.tar.gz
+		      wget http://sop.tik.ee.ethz.ch/pisa/selectors/femo/femo_linux.tar.gz
+		      wget http://sop.tik.ee.ethz.ch/pisa/selectors/spea2/spea2_linux.tar.gz
+		      wget http://sop.tik.ee.ethz.ch/pisa/selectors/nsga2/nsga2_linux.tar.gz
+		      wget http://sop.tik.ee.ethz.ch/pisa/selectors/ecea/ecea_linux.tar.gz
+		      wget http://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_linux.tar.gz
+		      wget http://sop.tik.ee.ethz.ch/pisa/selectors/msops/msops_linux.tar.gz
+		      wget http://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_linux.tar.gz
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
