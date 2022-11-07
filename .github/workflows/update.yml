@@ -40,7 +40,7 @@ jobs:
           wget http://sop.tik.ee.ethz.ch/pisa/lotz_semo/semo_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/semo2/semo2_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/femo/femo_win.zip
-          wget "http://sop.tik.ee.ethz.ch/pisa/selectors/spea2/spea2_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/spea2/spea2_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/nsga2/nsga2_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/ecea/ecea_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_win.zip
