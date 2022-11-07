@@ -22,7 +22,6 @@ jobs:
           rm -rf linux
           rm -rf win
           rm -rf source
-          rm *
           
           mkdir linux
           mkdir win
