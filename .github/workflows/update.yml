@@ -19,6 +19,9 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: |
+          rm *
+      
+          pushd linux
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_linux_32.tar.gz
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_linux32.rar
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/sibea/sibea_binary.zip
@@ -32,7 +35,9 @@ jobs:
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_linux.tar.gz
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/msops/msops_linux.tar.gz
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_linux.tar.gz
+          popd
           
+          pushd win
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/sibea/sibea_binary.zip
@@ -46,7 +51,9 @@ jobs:
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/msops/msops_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_win.tar.gz
+          popd
           
+          pushd source
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_c_source.rar
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/sibea/sibea_source.zip
@@ -61,5 +68,6 @@ jobs:
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/msops/msops_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_c_source.tar.gz
+          popd
 
       - uses: stefanzweifel/git-auto-commit-action@v4
