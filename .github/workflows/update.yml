@@ -32,5 +32,34 @@ jobs:
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_linux.tar.gz
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/msops/msops_linux.tar.gz
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_linux.tar.gz
+          
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/sibea/sibea_binary.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/hype/hype_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/lotz_semo/semo_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/semo2/semo2_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/femo/femo_win.zip
+          wget "http://sop.tik.ee.ethz.ch/pisa/selectors/spea2/spea2_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/nsga2/nsga2_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/ecea/ecea_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/msops/msops_win.zip
+          wget http://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_win.tar.gz
+          
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_c_source.rar
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/sibea/sibea_source.zip
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/hype/hype_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/lotz_semo/semo_c_source.tar
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/semo2/semo2_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/femo/femo_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/spea2/spea2_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/spea2/spea2_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/nsga2/nsga2_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/ecea/ecea_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/msops/msops_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_c_source.tar.gz
 
       - uses: stefanzweifel/git-auto-commit-action@v4
