@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+name: Update Archive
 
 on:
   push:
@@ -12,14 +10,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
 
       - run: |
+          # Clear any existing files.  This just makes using wget easier as it would otherwise
+          # append .1, .2, etc. to the filename instead of overwriting.
+          rm -rf linux
+          rm -rf win
+          rm -rf source
           rm *
+          
+          mkdir linux
+          mkdir win
+          mkdir source
       
           pushd linux
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_linux_32.tar.gz
