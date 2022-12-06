@@ -68,7 +68,6 @@ jobs:
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/semo2/semo2_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/femo/femo_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/spea2/spea2_c_source.tar.gz
-          wget https://sop.tik.ee.ethz.ch/pisa/selectors/spea2/spea2_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/nsga2/nsga2_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/ecea/ecea_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_c_source.tar.gz
