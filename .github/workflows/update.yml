@@ -19,19 +19,24 @@ jobs:
       - run: |
           # Clear any existing files.  This just makes using wget easier as it would otherwise
           # append .1, .2, etc. to the filename instead of overwriting.
-          rm -rf linux
-          rm -rf win
-          rm -rf source
+          rm -rf selectors
+          rm -rf variators
+          rm -rf extras
           
-          mkdir linux
-          mkdir win
-          mkdir source
+          mkdir -p selectors/linux
+          mkdir -p selectors/win
+          mkdir -p selectors/source
+          mkdir -p variators
+          mkdir -p extras
       
-          pushd linux
+          pushd selectors/linux
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_linux_32.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_linux_64.tar.gz
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_linux32.rar
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_linux64.rar
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/sibea/sibea_binary.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/hype/hype_linux_32.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/selectors/hype/hype_linux_64.tar.gz
           wget http://sop.tik.ee.ethz.ch/pisa/lotz_semo/semo_linux.tar.gz
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/semo2/semo2_linux.tar.gz
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/femo/femo_linux.tar.gz
@@ -43,7 +48,7 @@ jobs:
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_linux.tar.gz
           popd
           
-          pushd win
+          pushd selectors/win
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_win.zip
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/sibea/sibea_binary.zip
@@ -59,7 +64,7 @@ jobs:
           wget http://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_win.tar.gz
           popd
           
-          pushd source
+          pushd selectors/source
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/spam/spam_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/shv/shv_c_source.rar
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/sibea/sibea_source.zip
@@ -73,6 +78,26 @@ jobs:
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/ibea/ibea_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/msops/msops_c_source.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/selectors/epsmoea/epsmoea_c_source.tar.gz
+          popd
+          
+          pushd variators
+          wget https://sop.tik.ee.ethz.ch/pisa/variators/gwlab/gwlab.rar
+          wget https://sop.tik.ee.ethz.ch/pisa/lotz_semo/lotz_c_source.tar
+          wget https://sop.tik.ee.ethz.ch/pisa/variators/lotz2/lotz2_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/variators/knapsack/knapsack_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/variators/expo/expo_java_sources.zip
+          wget https://sop.tik.ee.ethz.ch/pisa/variators/wfg/wfg_c_source.rar
+          wget https://sop.tik.ee.ethz.ch/pisa/variators/dtlz/dtlz_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/variators/bbv/bbv_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/variators/mlotz/mlotz_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/variators/mmpn/mmpn_c_source.tar.gz
+          popd
+          
+          pushd extras
+          wget https://sop.tik.ee.ethz.ch/pisa/monitor/monitor_c_source.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/monitor/monitor_win.zip
+          wget https://sop.tik.ee.ethz.ch/pisa/monitor/monitor_linux.tar.gz
+          wget https://sop.tik.ee.ethz.ch/pisa/assessment/distribution.zip
           popd
 
       - uses: stefanzweifel/git-auto-commit-action@v4
