@@ -19,9 +19,6 @@ jobs:
       - run: |
           # Clear any existing files.  This just makes using wget easier as it would otherwise
           # append .1, .2, etc. to the filename instead of overwriting.
-          rm -rf linux
-          rm -rf win
-          rm -rf source
           rm -rf selectors
           rm -rf variators
           rm -rf extras
@@ -101,6 +98,10 @@ jobs:
           wget https://sop.tik.ee.ethz.ch/pisa/monitor/monitor_win.zip
           wget https://sop.tik.ee.ethz.ch/pisa/monitor/monitor_linux.tar.gz
           wget https://sop.tik.ee.ethz.ch/pisa/assessment/distribution.zip
+          wget https://sop.tik.ee.ethz.ch/download/supplementary/hype/files/hypeIndicatorExact.m
+          wget https://sop.tik.ee.ethz.ch/download/supplementary/hype/files/hypeIndicatorSampled.m
+          wget https://sop.tik.ee.ethz.ch/download/supplementary/objectiveReduction/ObjectiveReduction_v1.zip
+          wget https://sop.tik.ee.ethz.ch/download/supplementary/weightedHypervolume/weightedHypervolume.zip
           popd
 
       - uses: stefanzweifel/git-auto-commit-action@v4
