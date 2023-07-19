@@ -19,6 +19,9 @@ jobs:
       - run: |
           # Clear any existing files.  This just makes using wget easier as it would otherwise
           # append .1, .2, etc. to the filename instead of overwriting.
+          rm -rf linux
+          rm -rf win
+          rm -rf source
           rm -rf selectors
           rm -rf variators
           rm -rf extras
